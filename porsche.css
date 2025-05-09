@@ -1,0 +1,274 @@
+:root[data-theme='dark'] {
+  --bg-default: #121212;
+  --bg-paper: #000;
+  --text-primary-color: #fff;
+  --transition-duration: 0.3s;
+}
+
+:root[data-theme='light'] {
+  --bg-default: #ffffff;
+  --bg-paper: #f5f5f5;
+  --text-primary-color: #000;
+  --transition-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 32px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  color: var(--text-primary-color);
+}
+
+/* Toggle btn */
+.toggle-btn {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #888;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 20px auto 0;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle-container {
+  margin-left: auto;
+}
+
+html[data-theme='light'] .toggle-btn {
+  background-color: #ccc;
+}
+
+html[data-theme='light'] .toggle-thumb {
+  transform: translateX(30px);
+}
+
+.label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+button,
+input[type='button'] {
+  color: var(--text-primary-color);
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 1px solid var(--text-primary-color);
+  border-radius: 6px;
+  width: fit-content;
+  cursor: pointer;
+  transition: all var(--transition-duration);
+}
+
+button:hover,
+input[type='button']:hover {
+  background-color: var(--text-primary-color);
+  color: var(--bg-default);
+}
+
+body {
+  background-color: var(--bg-default);
+}
+
+header {
+  height: 100dvh;
+  position: relative;
+}
+
+header .landing-attachment {
+  background-size: cover;
+  background-position: center center;
+  background-image: url(./public/porsche.avif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+header .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #0000008f;
+}
+
+header .top-header {
+  padding: 16px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+header .landing {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 102px;
+  gap: 22px;
+}
+
+header svg {
+  max-height: 64px;
+  max-width: 165px;
+  margin-left: auto;
+}
+
+.landing h2 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.landing .discover {
+  padding: 16px 26px;
+  font-size: 1.2rem;
+  border-width: 3px;
+  color: #fff;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.models {
+  margin-top: 32px;
+}
+
+.models h3.models-header {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/* Card */
+.models-container {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: #000;
+  color: white;
+  padding: 12px 18px;
+  height: 435px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card .card-content {
+  margin-top: auto;
+}
+
+.card img,
+.card svg {
+  max-width: 67px;
+  max-height: 42px;
+  height: auto;
+  display: block;
+  fill: var(--text-primary-color);
+  margin-bottom: 12px;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  text-align: center;
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.75rem;
+}
+
+.btn.outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 900px) {
+  header .landing {
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    text-align: center;
+  }
+}
